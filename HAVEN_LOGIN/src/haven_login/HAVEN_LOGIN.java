@@ -1,17 +1,12 @@
-package haven_login;
-
-
-import java.awt.Frame;
-import java.awt.Toolkit;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package haven_login;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,9 +20,7 @@ public class HAVEN_LOGIN extends javax.swing.JFrame {
     public HAVEN_LOGIN() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         
-        
         initComponents();
-        
     }
 
     /**
@@ -40,93 +33,99 @@ public class HAVEN_LOGIN extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jpassword = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         jname = new javax.swing.JTextField();
-        login = new javax.swing.JButton();
-        Check = new javax.swing.JCheckBox();
-        exit = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jpassword = new javax.swing.JPasswordField();
+        login = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        Check = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1380, 776));
+        setPreferredSize(new java.awt.Dimension(1380, 776));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0, 80));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0,80));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("PASSWORD");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
-        jPanel1.add(jpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 390, 35));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("USERNAME");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 70, -1, -1));
 
         jname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jnameActionPerformed(evt);
             }
         });
-        jPanel1.add(jname, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 390, 35));
+        jPanel1.add(jname, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 95, 369, 35));
+
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("PASSWORD");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 146, -1, -1));
+        jPanel1.add(jpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 171, 369, 35));
 
         login.setBackground(new java.awt.Color(251, 151, 36));
-        login.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        login.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         login.setForeground(new java.awt.Color(255, 255, 255));
         login.setText("LOG IN");
-        login.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginActionPerformed(evt);
             }
         });
-        jPanel1.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 390, -1));
+        jPanel1.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 253, 369, 31));
 
-        Check.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setBackground(new java.awt.Color(251, 151, 36));
+        jButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("EXIT");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 302, 94, -1));
+
         Check.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
         Check.setForeground(new java.awt.Color(255, 255, 255));
-        Check.setText("Show Password?");
+        Check.setText("Show password?");
         Check.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CheckActionPerformed(evt);
             }
         });
-        jPanel1.add(Check, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 130, -1));
+        jPanel1.add(Check, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 213, -1, -1));
 
-        exit.setBackground(new java.awt.Color(251, 151, 36));
-        exit.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
-        exit.setForeground(new java.awt.Color(255, 255, 255));
-        exit.setText("EXIT");
-        exit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitActionPerformed(evt);
-            }
-        });
-        jPanel1.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 450, 380));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 470, 360));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\QCU\\Downloads\\Untitled_design__1_-removebg-preview (1).png")); // NOI18N
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 84, 100, -1));
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\QCU\\Downloads\\Untitled_design__1_-removebg-preview (1).png")); // NOI18N
+        jLabel4.setText("jLabel4");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 100, 100));
 
         jLabel5.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("BREW HAVEN");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 180, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 170, -1));
 
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\QCU\\Downloads\\PROTOTYPE (1) (2).jpg")); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1380, 776));
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\QCU\\Downloads\\PROTOTYPE (1) (2).jpg")); // NOI18N
+        jLabel1.setText("jLabel1");
+        jLabel1.setMaximumSize(new java.awt.Dimension(1380, 776));
+        jLabel1.setMinimumSize(new java.awt.Dimension(1380, 776));
+        jLabel1.setPreferredSize(new java.awt.Dimension(1380, 776));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1380, 776));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jnameActionPerformed
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         if (jname.getText().equals("")){
@@ -144,17 +143,10 @@ public class HAVEN_LOGIN extends javax.swing.JFrame {
         else{
            JOptionPane.showMessageDialog(null, "Wrong Username or Password","Message",JOptionPane.ERROR_MESSAGE);
         }
-        
-
-       
     }//GEN-LAST:event_loginActionPerformed
 
-    private void jnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jnameActionPerformed
-
     private void CheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckActionPerformed
-        if(Check.isSelected())
+         if(Check.isSelected())
         {
         jpassword.setEchoChar((char)0);
         }
@@ -164,9 +156,9 @@ public class HAVEN_LOGIN extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_CheckActionPerformed
 
-    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_exitActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+          System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,7 +197,7 @@ public class HAVEN_LOGIN extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox Check;
-    private javax.swing.JButton exit;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -216,24 +208,4 @@ public class HAVEN_LOGIN extends javax.swing.JFrame {
     private javax.swing.JPasswordField jpassword;
     private javax.swing.JButton login;
     // End of variables declaration//GEN-END:variables
-
-    private static class jtuser {
-
-        private static Object getText() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public jtuser() {
-        }
-    }
-
-    private static class jpassword {
-
-        private static Object getText() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public jpassword() {
-        }
-    }
 }
